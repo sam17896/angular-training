@@ -5,25 +5,28 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
-import { HeaderComponent } from './components/layout/header/header.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
-import { PaintDirective } from './directives/paint.directive';
-import { PointerDirective } from './directives/cursorpointer.directive';
+import { PostsComponent } from './components/posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app.routing';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoItemComponent,
-    HeaderComponent,
     AddTodoComponent,
-
-    PaintDirective,
-    PointerDirective
+    PostsComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    SharedModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

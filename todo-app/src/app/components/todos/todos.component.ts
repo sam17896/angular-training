@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, OnChanges, SimpleChanges } from '@angular/core';
 import { SampleService } from 'src/app/services/sample.service';
 
 @Component({
@@ -6,10 +6,11 @@ import { SampleService } from 'src/app/services/sample.service';
   templateUrl: './todos.component.html',
   styleUrls: ['./todos.component.scss']
 })
-export class TodosComponent implements OnInit {
+export class TodosComponent implements OnInit, OnChanges {
 
   items: string[];
   todoItem: string;
+  sample: string = 'test';
 
 
   constructor(private sampleService: SampleService) { }
@@ -21,9 +22,13 @@ export class TodosComponent implements OnInit {
     });
   }
 
+  ngOnChanges(simple: SimpleChanges) {
+    console.log(simple);
+  }
+
   onClick() {
     this.sampleService.setTodo([...this.items, this.todoItem]);
-  //  this.addTodo.emit(this.todoItem);
+    //  this.addTodo.emit(this.todoItem);
   }
 
 }

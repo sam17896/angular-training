@@ -1,6 +1,6 @@
-<p>{{items}}</p>
-
-
-<input type="text" [(ngModel)]="todoItem" />
-
-<button (click)="onClick()">Add Todo</button>
+<app-list [items]="items"></app-list>
+<input paint [customColor]="'green'" type="text" [(ngModel)]="todoItem" />
+<button paint [customColor]="'green'" (click)="onClick()">Add Todo</button>
+<div *ngIf="sample == 'test'">
+  <p>Result</p>
+</div>

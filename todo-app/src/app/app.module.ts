@@ -6,16 +6,26 @@ import { AppComponent } from './app.component';
 import { TitleComponent } from './components/title.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { SampleService } from './services/sample.service';
+import { PaintDirective } from './directive/paint.directive';
+import { PostsComponent } from './components/posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.module';
+import { ListComponent } from './components/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    TodosComponent
+    TodosComponent,
+    PaintDirective,
+    PostsComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [SampleService],
   bootstrap: [AppComponent]

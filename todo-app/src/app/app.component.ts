@@ -23,5 +23,6 @@ export class AppComponent implements OnInit {
   addTodo(todo: string) {
     //this.items.push(todo);
     this.items = [...this.items, todo];
+    this.title = 'sdafsad';
   }
 }

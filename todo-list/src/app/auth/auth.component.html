@@ -1,0 +1,6 @@
+<app-header title="Login"></app-header>
+<form class="form" (ngSubmit)="login()">
+  <input type="text" name="username" [(ngModel)]="username" placeholder="Username">
+  <input type="password" name="password" [(ngModel)]="password" placeholder="Password">
+  <input type="submit" value="Submit" class="btn">
+</form>

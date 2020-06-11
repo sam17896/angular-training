@@ -1,0 +1,9 @@
+<div [ngClass]="setClasses()" paint [customColor]="index % 2 == 0 ? '#f4f4f4': '#e3e3e3'" pointer>
+  <p>
+    <input (change)="onToggle(todo)" type="checkbox" id="{{ todo.id }}" [checked]="todo.completed" />
+    <label for="{{ todo.id }}">
+      {{ todo.title }}
+    </label>
+    <button (click)="onDelete(todo)" class="del">X</button>
+  </p>
+</div>

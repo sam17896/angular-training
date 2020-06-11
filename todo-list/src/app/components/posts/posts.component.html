@@ -1,0 +1,7 @@
+<app-header title="Posts"></app-header>
+<app-add-post (onAddPost)="addPost($event)"></app-add-post>
+<div *ngFor="let post of posts;let i = index" paint [customColor]="i % 2 == 0 ? '#f4f4f4': '#e3e3e3'"
+  style="padding: 10px;">
+  <h1>{{post.title}}</h1>
+  <p>{{post.body}}</p>
+</div>
